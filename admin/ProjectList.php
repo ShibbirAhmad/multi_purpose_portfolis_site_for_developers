@@ -7,13 +7,13 @@
  <?php 
 
 if (isset($_GET['deleteProjectId']) ) {
-		
+		  
 	    $delId=$_GET['deleteProjectId'];
-		$delProject=$project->deleteProject($delId);
+		$delProject=$Project->deleteProject($delId);
 		
 		if ($delProject) {
 
-			return $delProject;
+			return  $delProject;
 		}
 }
 
@@ -24,26 +24,24 @@ if (isset($_GET['deleteProjectId']) ) {
 			<thead>
 				<tr>
 				    <th width="10%" >Serial</th>
-					<th width="15%" >project Title</th>
-					<th width="10%" >Category</th>
-					<th width="20%" >Description</th>
-					<th width="10%" >price</th>
+					<th width="15%" >Project Name</th>
+					<th width="30%" >Description</th>
 					<th width="20%" >Image</th>
+					<th width="10%" >Author</th>
 					<th width="15%" >Action</th>
 				</tr>
 			</thead>
-			<tbody>      
+			<tbody>       
 			
-			    
 	<?php
                 
-				$get_admin=$project->getAllProject();
+				$getProject=$project->getAllProject();
 
-                if($get_admin){ 
+                if($getProject){ 
 
                       $i=0;
 
-                while ($result=$get_admin->fetch_assoc()) {
+                while ($result=$getProject->fetch_assoc()) {
 
                 	$i++;
 
@@ -51,22 +49,22 @@ if (isset($_GET['deleteProjectId']) ) {
     ?>
 
 				<tr class="odd gradeX">
-  
+            
+	
 					<td><?php echo $i; ?></td>
-					<td><?php echo $result ['projectName'] ;?></td>
-					<td><?php echo $result ['projectCategoryId'] ;?></td>
-					<td><?php echo $helper->textshorten( $result ['projectDescription'],60 );?></td>
-					<td><?php echo $result ['projectPrice'] ;?></td>
-					<td><img src="<?php echo $result['projectImage']; ?>" height="100px" width="50px"/> </td>
+					<td><?php echo $result['projectName'] ;?></td>
+					<td><?php echo $helper->textshorten( $result ['projectDescription'],120 );?></td>
+					<td><img src="<?php echo $result['projectImage']; ?>" height="150px" width="100px"/> </td>
+                    <td> <?php echo $result['projectAuthor'];  ?></td>
 					<td><a href="editProject.php?editProjectId=<?php echo $result['projectId'] ; ?>">Edit</a> ||
 					 <a onclick="return confirm('Are sure to Delete');"  
 					  
 					  href="?deleteProjectId=<?php echo $result['projectId'] ; ?>">Delete</a></td>
 
-			<?php  } } ?>
+		
 
 				</tr>
-				
+					<?php  } } ?>
 			</tbody>
 		</table>
 

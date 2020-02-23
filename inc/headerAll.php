@@ -87,7 +87,7 @@ spl_autoload_register(function($class){
 	          <li class="nav-item"><a href="portfolio.php " class="nav-link"><span>Protfolio</span></a></li>
 	          <li class="nav-item"><a href=project.php " class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href=" index.php " class="nav-link"><span>Developer Team</span></a></li>
-	          <li class="nav-item"><a href="single.php" class="nav-link"><span>Blog</span></a></li>
+	          <li class="nav-item"><a href="blog.php" class="nav-link"><span>Blog</span></a></li>
 
 	          <li class="nav-item"><a href="index.php" class="nav-link"><span>Contact to order </span></a></li>
 

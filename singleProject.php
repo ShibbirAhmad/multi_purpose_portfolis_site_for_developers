@@ -7,8 +7,7 @@
         <div class="row">
           <div class="col-lg-8 ftco-animate">
 
-
-  <?php 
+          <?php 
   
   //get category result data 
 
@@ -38,7 +37,7 @@
     } ?> 
 
 
-  <?php 
+          <?php 
       
       // this code for searching reasult
 
@@ -67,10 +66,39 @@
 
 
 
+          <?php  
+          
+          if(isset($_GET['idOfProject'])){
+            $projectId=$_GET['idOfProject'];
+        
+            
+        $projectData=$project->getSingleProject($projectId);
+        if($projectData){
+          while($project=$projectData->fetch_assoc()){   ?>
+
+           <h2 class="mb-3"><?php echo $project['projectName'] ; ?></h2>
+        
+              <img src="admin/<?php echo $project['projectImage'] ; ?>" width="800px" height="Auto" alt="postImage" class="img-fluid">
+
+            <p><?php echo $project['projectDescription']  ; ?></p>
+           
+          
+          <?php  } } } ?>
+
+
       <?php 
 
-      //displaying for general post
-              $projectData=$project->getLimitTwoProject();
+               
+            if(!isset($_GET['projectId']) &&  $_GET['projectId']==NULL) {
+                    
+                echo "<script> window.location='project.php' </script>";
+            }else {
+
+                   $projectId=$_GET['projectId'];
+          
+
+
+              $projectData=$project->getSingleProject($projectId);
               if($projectData){
                 while($project=$projectData->fetch_assoc()){ 
 
@@ -83,8 +111,10 @@
             <p><?php echo $project['projectDescription']  ; ?></p>
            
           
-          <?php  }  } ?>
+          <?php  } } } ?>
 
+
+          >
             
 
           </div> <!-- .col-md-8 -->
@@ -98,8 +128,7 @@
 
 
           <div class="col-lg-4 sidebar ftco-animate">
-         
- 
+          
 
           <div class="sidebar-box">
               <form action="#" method="post" class="search-form">
@@ -112,7 +141,6 @@
 
 
 
-
             <div class="sidebar-box ftco-animate">
             	<h3 class="heading-sidebar"> Website Categories</h3>
               <ul class="categories">
@@ -121,7 +149,7 @@
                 if($getProjectCategory){
                   while($showCategory=$getProjectCategory->fetch_assoc()){ 
 
-  ?>
+?>
 
                 <li><a href="?categoryId=<?php echo $showCategory['id']; ?>"><?php echo $showCategory['categoryName']; ?><span>(12)</span></a></li>
 
@@ -145,7 +173,7 @@
 
          <a class="blog-img mr-4" style="background-image: url(admin/<?php echo $project['projectImage']; ?>);"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="singleProject.php?projectId=<?php echo $project['projectId']; ?>  "><?php echo $project['projectName']; ?></a></h3>
+                  <h3 class="heading"><a href="?idOfProject=<?php echo $project['projectId']; ?>"><?php echo $project['projectName']; ?></a></h3>
                   <div class="meta">
                     <div><a href="<?php echo $project['projectId']; ?>"><span class="icon-calendar"><?php echo $project['date']; ?> </span></a></div>
       
