@@ -151,6 +151,46 @@ public function updateProject($data,$file,$id){
 }
 
 
+//get category result data
+
+public function getCategoryProject($catId){
+
+  $query="SELECT * FROM project_table WHERE projectCategoryId='$catId'  ";
+  $selecting=$this->db->select($query);
+  if ($selecting) {
+      return $selecting;
+  }
+
+}
+
+
+
+//get data single project
+
+public function getSingleProject($projectId){
+
+      $query="SELECT * FROM project_table  WHERE projectId='$projectId' ";
+      $selecting=$this->db->select($query);
+      if ($selecting) {
+          return $selecting;
+      }
+
+}
+
+//
+//get reasult post 
+
+public function getSearchProject($searchData){
+         
+  $query="SELECT * FROM project_table  WHERE  projectName LIKE '%$searchData%' 
+  AND projectDescription LIKE '%$searchData%' ";
+  $selecting=$this->db->select($query);
+  if ($selecting) {
+      return $selecting;
+  } 
+
+}
+
 //All project
 
 

@@ -33,7 +33,7 @@ spl_autoload_register(function($class){
 
 		<link rel="stylesheet" href="nivocss/nivostyle.css" />
 		<link rel="stylesheet" href="nivocss/responsive.css" />
-
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
 
 	<link rel="icon" href="img/favicon.png" type="image/png" />
 	<link rel="shortcut icon" href="img/favicon.ico" />		
@@ -50,6 +50,54 @@ spl_autoload_register(function($class){
 	
 	   
 		<div class="wrap">
+		<style>
+		       
+			   .portfoio{width:935px} 
+			   .portfolio table{}
+			   .portfolio table tr {}
+			   .portfolio table td{}
+	   
+			   .innerRangePhp{float:left;width:800px;height:50px;border-radius:30px; background:#fc721e;} 
+			   .rangePhp{width:935px;height:50px;border-radius:30px; background:#fff;} 
+
+
+				.innerRangeLaravel{float:left;width:300px;height:50px;border-radius:30px; background:#fc721e;} 
+			   .rangeLaravel{width:935px;height:50px;border-radius:30px; background:#fff;} 
+				
+			   .innerRangeJavascript{float:left;width:500px;height:50px;border-radius:30px; background:#fc721e;} 
+			   .rangeJavascript{width:935px;height:50px;border-radius:30px; background:#fff;} 
+				
+			   </style>	
+		 <div class="portfolio"> 
+				 
+				  <table class='table bg-success ' >
+							<tr>
+								  <td><h4> POP & OOP(PHP)</h4> </td>
+								  <td>
+									   <div class="rangePhp">
+											   <div class="innerRangePhp"></div>
+									   </div>
+								  
+								  </td>
+							</tr>
+	   
+							<tr> 
+							<td><h4> Laravel </h4> </td>
+								  <td><div class="rangeLaravel">
+								       <div class="innerRangeLaravel"></div>
+								  </div></td>   
+							</tr>
+	   
+							<tr> 
+							<td><h4> javascript(front end) </h4> </td>
+								  <td><div class="rangeJavascript">
+								          <div class="innerRangeJavascript"></div>
+								  </div></td>   
+							</tr>
+				  </table>    
+	   
+		 </div>
+
 			<section>
 				<div id="slider_wrapper">
                

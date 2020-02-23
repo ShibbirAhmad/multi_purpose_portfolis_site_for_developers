@@ -18,7 +18,7 @@
                 <li><a href="project.php"><span class="icon-long-arrow-right mr-2"></span>project</a></li>
                 <li><a href="portfolio.php"><span class="icon-long-arrow-right mr-2"></span>portfolio</a></li>
                 <li><a href="#attorneys-section"><span class="icon-long-arrow-right mr-2"></span>Developer Team</a></li>
-                <li><a href="single.php"><span class="icon-long-arrow-right mr-2"></span>Blog</a></li>
+                <li><a href="blog.php"><span class="icon-long-arrow-right mr-2"></span>Blog</a></li>
                 <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
               </ul>
             </div>

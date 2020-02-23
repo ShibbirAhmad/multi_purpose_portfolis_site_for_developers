@@ -265,6 +265,63 @@ public function updatePost($data,$file,$id){
 }
 
 
+//get post by category
+
+public function getPostByCategory($categoryName) {
+
+      $query="SELECT * FROM post_table  WHERE postTitle LIKE '%$categoryName%' ";
+      $selecting=$this->db->select($query);
+      if ($selecting) {
+          return $selecting;
+      }
+           
+
+}
+
+
+//get category reasult post 
+
+public function getCategoryPost($searchData){
+         
+  $query="SELECT * FROM post_table  WHERE  postTitle LIKE '%$searchData%' ";
+  $selecting=$this->db->select($query);
+  if ($selecting) {
+      return $selecting;
+  } 
+
+}
+
+
+
+
+//get search reasult post 
+
+ public function getSearchPost($searchData){
+         
+      $query="SELECT * FROM post_table  WHERE  postTitle LIKE '%$searchData%' 
+      AND postDescription LIKE '%$searchData%' ";
+      $selecting=$this->db->select($query);
+      if ($selecting) {
+          return $selecting;
+      } 
+
+ }
+
+//get single post
+
+public function getSinglePost($id){
+
+  $query="SELECT * FROM post_table  WHERE postId='$id' ";
+  $selecting=$this->db->select($query);
+  if ($selecting) {
+      return $selecting;
+  }
+
+}
+
+
+
+
 //definate post
 
 public function getLimitPost(){

@@ -419,17 +419,17 @@
           	<div class="blog-entry justify-content-end">
 
      		<div class="text">
-          			<h3 class="heading"><a href="single.php"><?php echo $blog['postTitle'] ; ?></a></h3>
+          			<h3 class="heading"><a href="blog.php"><?php echo $blog['postTitle'] ; ?></a></h3>
           		</div>
-              <a href="single.php" class="block-20" style="background-image: url('admin/<?php echo $blog['postImage']; ?>');">
+              <a href="blog.php" class="block-20" style="background-image: url('admin/<?php echo $blog['postImage']; ?>');"> 
               </a>
               <div class="text mt-3 float-right d-block">
                 <p><?php echo $helper->textshorten($blog['postDescription'],150); ?></p>
                 <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="single.php?definatePostId=<?php echo $blog['postId']; ?>" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="mb-0"><a href="blog.php?definatePostId=<?php echo $blog['postId']; ?>" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
 	                <p class="ml-auto mb-0">
 	                	<a href="#attorneys-section" class="mr-2"><?php echo $blog['postAuthor']; ?></a>
-	                	<a href="single.php?definatePostId=<?php echo $blog['postId']; ?>" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                	<a href="blog.php?definatePostId=<?php echo $blog['postId']; ?>" class="meta-chat"><span class="icon-chat"></span> 3</a>
 	                </p>
                 </div>
               </div>
