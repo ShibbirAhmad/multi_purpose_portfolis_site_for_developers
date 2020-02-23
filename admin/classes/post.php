@@ -279,22 +279,8 @@ public function getPostByCategory($categoryName) {
 }
 
 
-//get category reasult post 
 
-public function getCategoryPost($searchData){
-         
-  $query="SELECT * FROM post_table  WHERE  postTitle LIKE '%$searchData%' ";
-  $selecting=$this->db->select($query);
-  if ($selecting) {
-      return $selecting;
-  } 
-
-}
-
-
-
-
-//get search reasult post 
+//get reasult post 
 
  public function getSearchPost($searchData){
          

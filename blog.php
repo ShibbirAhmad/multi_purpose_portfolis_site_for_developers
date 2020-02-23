@@ -17,33 +17,10 @@
     </section>  
 		
 
-    <section class="ftco-section"> 
+    <section class="ftco-section">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 ftco-animate">
-
-          <?php 
-      
-      // this code for category reasult
-
-      if(isset($_GET['catName']) ){
-
-            $searchData = $_GET['catName']; 
-
-            $blogData=$post->getCategoryPost($searchData);
-            if($blogData){
-              while($blog=$blogData->fetch_assoc()){ 
-      ?>
-
-                <h2 class="mb-3"><?php echo $blog['postTitle'] ; ?></h2>
-         
-                <img src="admin/<?php echo $blog['postImage'] ; ?>" width="800px" height="533px" alt="postImage" class="img-fluid">
-  
-              <p><?php echo $blog['postDescription']  ; ?></p>
-             
-            
-            <?php  } } } ?>
-
 
           <?php 
       
@@ -59,7 +36,7 @@
       ?>
 
                 <h2 class="mb-3"><?php echo $blog['postTitle'] ; ?></h2>
-         
+        
                 <img src="admin/<?php echo $blog['postImage'] ; ?>" width="800px" height="533px" alt="postImage" class="img-fluid">
   
               <p><?php echo $blog['postDescription']  ; ?></p>
@@ -272,7 +249,7 @@
 
   ?>
 
-                <li><a href="?catName=<?php echo $showCategory['categoryName']; ?> " ><?php echo $showCategory['categoryName']; ?><span>(12)</span></a></li>
+                <li><a href="?catName='<?php echo $showCategory['categoryName']; ?>' " ><?php echo $showCategory['categoryName']; ?><span>(12)</span></a></li>
 
 <?php }  } ?>                    
               </ul>

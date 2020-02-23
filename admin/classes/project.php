@@ -151,19 +151,6 @@ public function updateProject($data,$file,$id){
 }
 
 
-//get category result data
-
-public function getCategoryProject($catId){
-
-  $query="SELECT * FROM project_table WHERE projectCategoryId='$catId'  ";
-  $selecting=$this->db->select($query);
-  if ($selecting) {
-      return $selecting;
-  }
-
-}
-
-
 
 //get data single project
 
@@ -177,7 +164,7 @@ public function getSingleProject($projectId){
 
 }
 
-//
+
 //get reasult post 
 
 public function getSearchProject($searchData){

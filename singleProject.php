@@ -7,35 +7,6 @@
         <div class="row">
           <div class="col-lg-8 ftco-animate">
 
-          <?php 
-  
-  //get category result data 
-
-        if(isset($_GET['categoryId']) && $_GET['categoryId'] != NULL){
-
-            $sendCat=$_GET['categoryId'];
-
-            $getCatData=$project->getCategoryProject($sendCat);
-
-           if($getCatData){
-
-            while($project=$getCatData->fetch_assoc()){  
-  
-  ?>
-
-<h2 class="mb-3"><?php echo $project['projectName'] ; ?></h2>
-        
-        <img src="admin/<?php echo $project['projectImage'] ; ?>" width="800px" height="Auto" alt="postImage" class="img-fluid">
-
-      <p><?php echo $project['projectDescription']  ; ?></p>
-     
-    
-    <?php  } } }else {
-        
-           echo "<h2> Search Data aren't available </h2>";          
-
-    } ?> 
-
 
           <?php 
       

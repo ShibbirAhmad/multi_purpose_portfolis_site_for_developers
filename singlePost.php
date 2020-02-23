@@ -6,8 +6,6 @@
         <div class="row">
           <div class="col-lg-8 ftco-animate">
 
-
-
       <?php 
       
       // this code for searching reasult
@@ -261,7 +259,7 @@
 
   ?>
 
-                <li><a href="blog.php"> <?php echo $showCategory['categoryName']; ?><span>(12)</span></a></li>
+                <li><a href="?categoryId=<?php echo $showCategory['id']; ?>"><?php echo $showCategory['categoryName']; ?><span>(12)</span></a></li>
 
 <?php }  } ?>                    
               </ul>
